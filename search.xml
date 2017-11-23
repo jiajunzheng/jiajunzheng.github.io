@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F11%2F23%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu添加用户到root组]]></title>
+    <url>%2F2017%2F11%2F19%2Fubuntu%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E5%88%B0root%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[以root身份登录，然后输入1usermod -g root username 执行完后username即归属于root组了，可以再输入]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[pyenv进行python版本本地安装]]></title>
+    <url>%2F2017%2F11%2F18%2Fpyenv%E8%BF%9B%E8%A1%8Cpython%E7%89%88%E6%9C%AC%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[pyenv 是一个针对python的多版本管理工具。使用pyenv可以很轻松的在一个系统上使用不同版本的python，并实现轻松的切换。 关于pyenv的更多介绍可以参考：https://github.com/yyuu/pyenv pyenv install 命令用于在系统上安装python， 比如pyenv install 3.5.0 则可以帮助我们安装python 3.5.0。然而，由于种种原因， pyenv install 可能下载速度非常慢，甚至下载失败。本文主要介绍pyenv如何使用本地的python安装包，安装python。 我们要了解pyenv的安装原理， 其实它是利用了python-build工具，从python官网下载python包，然后安装。 我的pyenv路径是：~/.pyenv/ 对应的python-build路径就为~/.pyenv/plugins/python-build/share/python-build。而在~/.pyenv/plugins/python-build/share/python-build中有各种python版本的安装指令， 如3.5.2 版本： 其中在install_package “Python-3.5.2” … 这一行指定了python3.5.0的获取方式，我们将其修改为： 12345678#require_gccinstall_package &quot;openssl-1.0.2k&quot; &quot;https://www.openssl.org/source/openssl-1.0.2k.tar.gz#6b3977c61f2aedf0f96367dcfb5c6e578cf37e7b8d913b4ecb6643c3cb88d8c0&quot; mac_openssl --if has_broken_mac_opensslinstall_package &quot;readline-6.3&quot; &quot;https://ftpmirror.gnu.org/readline/readline-6.3.tar.gz#56ba6071b9462f980c5a72ab0023893b65ba6debb4eeb475d7a563dc65cafd43&quot; standard --if has_broken_mac_readlineif has_tar_xz_support; theninstall_package &quot;/home/hadoop/.pyenv/cache/Python-3.5.0.tar.xz&quot; ldflags_dirs standard verify_py35 ensurepipelseinstall_package &quot;Python-3.5.2&quot; &quot;https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz#1524b840e42cf3b909e8f8df67c1724012c7dc7f9d076d4feef2d3eff031e8a0&quot; ldflags_dirs standard verify_py35 ensurepipfi 其中/home/hadoop/.pyenv/cache/ 是我们存放本地安装包的路径。（可能不存在需要自己创建，切记目录pyenv_home/cache不能随意更改，否则报错）。然后执行pyenv install 3.5.0 即可。（建议使用pyenv install 3.5.0 -v，-v是用于输出详细安装信息的。因为编译需要比较长时间，如果不加-v可能误认为命令没有执行，卡住了。） 安装完毕后执行下exec $SHELL 重置下shell环境，可以通过pyenv global设置要使用的python版本。 注意点： 本地安装需要一些依赖库，否则可能会安装失败。 可以根据报错信息修改。 我在安装的时候遇到了下面错误： 1ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib? 这是提示缺乏ssl库，我是用的是Ubuntu，使用下列命令安装openssl库(其它系统可能有所区别）： 1sudo apt install libssl-dev]]></content>
+      <categories>
+        <category>开发工具</category>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>安装配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pyenv—linux下的python版本管理工具]]></title>
+    <url>%2F2017%2F11%2F18%2Fpydev%E2%80%94linux%E4%B8%8B%E7%9A%84python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[pyenv是一个简单的Python版本管理工具。以前叫做Pythonbrew，Pyenv让你能够方便地切换全局Python版本，安装多个不同的Python版本，设置独立的某个文件夹或者工程目录特异的Python版本，同时创建Python虚拟环境（”virualenv’s“）。所有这些操作均可以在类UNIX系统的机器上（Linux和OS X）不需要依赖Python本身执行，而且它工作在用户层，不需要任何sudo操作。那么我们开始吧！ 安装pyenv 安装依赖 1sudo apt-get install libbz2-dev libreadline6 libreadline6-dev libsqlite3-dev libssl-dev 获取pyenv 1git clone https://github.com/pyenv/pyenv.git ~/.pyenv 环境变量设置 12echo &apos;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&apos; &gt;&gt; ~/.bashrcecho &apos;export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;&apos; &gt;&gt; ~/.bashrc 添加pyenv init到shell中 1echo -e &apos;if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n eval &quot;$(pyenv init -)&quot;\nfi&apos; &gt;&gt; ~/.bashrc 重启shell 1exec &quot;$SHELL&quot; pyenv使用 查看pyenv版本 12pyenv -vpyenv 1.1.5-40-g5b5df15 pyenv的使用说明 1234567891011121314151617 Usage: pyenv &lt;command&gt; [&lt;args&gt;]Some useful pyenv commands are: commands List all available pyenv commands local Set or show the local application-specific Python version global Set or show the global Python version shell Set or show the shell-specific Python version install Install a Python version using python-build uninstall Uninstall a specific Python version rehash Rehash pyenv shims (run this after installing executables) version Show the current Python version and its origin versions List all Python versions available to pyenv which Display the full path to an executable whence List all Python versions that contain the given executableSee `pyenv help &lt;command&gt;&apos; for information on a specific command.For full documentation, see: https://github.com/pyenv/pyenv#readme 获取可用的所有python版本(图片只显示一部分) 1pyenv install --list 安装python 3.6.3跟anaconda3-5.0.112345pyenv install 3.6.3Downloading Python-3.6.3.tar.xz...-&gt; https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xzInstalling Python-3.6.3...Installed Python-3.6.3 to /home/hadoop/.pyenv/versions/3.6.3 1pyenv install anaconda3-5.0.1 查看python版本1234pyenv versionsInstalling Anaconda3-5.0.1-Linux-x86_64...Installed Anaconda3-5.0.1-Linux-x86_64 to /home/hadoop/.pyenv/versions/anaconda3-5.0.1 注意：安装路径被笔者改为/home/hadoop/.pyenv/versions/anaconda3-5.0.1因为难以忍受pyenv默认下载链接的速度，笔者改为本地安装，配置方法请参考另一篇文章 《pyenv进行python版本本地安装》 查看已安装python版本1234pyenv versions* system (set by /home/hadoop/.pyenv/version) 3.6.3 anaconda3-5.0.1 带*号为全局默认版本 把anaconda3-5.0.1设为默认版本12345pyenv global anaconda3-5.0.1pyenv versions system 3.6.3* anaconda3-5.0.1 (set by /home/hadoop/.pyenv/version) 12345pythonPython 3.6.3 |Anaconda, Inc.| (default, Oct 13 2017, 12:02:49) [GCC 7.2.0] on linuxType &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.&gt;&gt;&gt; 卸载python 3.6.312345pyenv uninstall 3.6.3pyenv: remove /home/hadoop/.pyenv/versions/3.6.3?(输入yes回车)pyenv versions system * anaconda3-5.0.1 (set by /home/hadoop/.pyenv/version) python 3.6.3已经成功卸载。]]></content>
+      <categories>
+        <category>开发工具</category>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>安装配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自定义R函数，解决四舍五入问题]]></title>
+    <url>%2F2017%2F11%2F17%2F%E8%87%AA%E5%AE%9A%E4%B9%89R%E5%87%BD%E6%95%B0%EF%BC%8C%E8%A7%A3%E5%86%B3%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“四舍五入”时，怎么处理呢？既然round不能实现“四舍五入”，那就抛开round，自己定义一个“round”方法，这里用myround表示。 问题举例，考虑下面语句输出结果： 可以发现，当0.5前面的值为奇数的时候，则向前进入，当前面的值为偶数的时候，则把0.5舍去。跟传统的“四舍五入”存在差异。下面简单介绍自定义函数myround的实现。 算法1：①获取x的符号，记为vorz ②计算 $$ z = \left | x \right | * 10 ^{n} + 0.5 $$ ③对z向下截断,并把结果赋值给z ④计算 $$ z = z / (10^{n}) $$ ⑤返回 z * vorz 对应的R代码如下:12345678myround = function(x, n)&#123; vorz = sign(x) z = abs(x) * 10^n z = z + 0.5 z = trunc(z) z = z/10^n return(z * vorz)&#125; 算法2:①计算 $$ z = x * 10^{n} + 0.5 $$ ②对z进行向下取整 ③计算 $$ z = z / (10^{n}) $$ ④返回z R代码如下：1234567myround = function(x, n)&#123; z = x * 10^n z = z + 0.5 z = floor(z) z = z/10^n return (z)&#125; 再次测试一开始的代码： 四舍五入完成。代码改进：考虑到下面的问题，当用myround对4.5四舍五入时，第二个参数忘记写，会出现下面报错，为了避免这种情况发生，给n设置默认值0，即默认情况下是保留整数位。 改进后代码如下：12345678910111213141516myround = function(x, n=0)&#123; vorz = sign(x) z = abs(x) * 10^n z = z + 0.5 z = trunc(z) z = z/10^n return(z * vorz)&#125;ormyround = function(x, n=0)&#123; z = x * 10^n z = z + 0.5 z = floor(z) z = z/10^n return (z)&#125;]]></content>
+      <categories>
+        <category>统计软件</category>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux安装R]]></title>
+    <url>%2F2017%2F11%2F17%2Flinux%E5%AE%89%E8%A3%85R%2F</url>
+    <content type="text"><![CDATA[文章介绍ubuntu跟centos两种发型版本安装R语言的方法。 ubuntu安装R配置R源1sudo nano /etc/apt/sources.list 在最后添加1deb bin/https://mirrors.tuna.tsinghua.edu.cn/CRAN//ubuntu xenial/ 设置Secure APT1sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 更新源1sudo apt update 安装R语言1sudo apt install r-base 在终端输入R并回车，出现界面: Centos安装R安装epel-release1sudo yum install -y epel-release 修改源配置文件1sudo vim /etc/yum.repos.d/epel.repo 进入插入模式后把所有的12345#baseurlmirrorlist改成baseurl#mirrorlist （centos7.x此步可省） 安装R12sudo yum install -y R-core.x86_64sudo yum install -y R-core-devel.x86_64 如果安装rJava，可以切换到root用户，执行1R CMD javareconf （当然要安装jdk先啦） 终端输入R并回车，出现界面:由于笔者主要使用ubuntu跟Centos，其它linux发型版本未做测试。如果安装中碰到问题，欢迎与笔者一起讨论。联系QQ：1099094077]]></content>
+      <categories>
+        <category>统计软件</category>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>安装配置</tag>
+      </tags>
+  </entry>
+</search>
