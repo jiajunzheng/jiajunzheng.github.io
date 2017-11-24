@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F11%2F24%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[ubuntu添加用户到root组]]></title>
     <url>%2F2017%2F11%2F19%2Fubuntu%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E5%88%B0root%E7%BB%84%2F</url>
     <content type="text"><![CDATA[以root身份登录，然后输入1usermod -g root username 执行完后username即归属于root组了，可以再输入]]></content>
