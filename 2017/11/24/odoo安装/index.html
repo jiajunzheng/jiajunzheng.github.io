@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="R基础," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,22 +79,19 @@
 
 
 
-<meta name="description" content="对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函">
-<meta name="keywords" content="R基础">
+<meta name="description" content="对初学者而言，odoo的安装是横在面前的第一道坎，必须过的。和几年前情况不同，最近几年，odoo在安装方面已经大幅改进，不需要太专业的技能也能完成安装过程。下面大致介绍odoo的安装过程。 系统环境  12uname  -aLinux hadoop 4.10.0-40-generic #44~16.04.1-Ubunt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自定义R函数，解决四舍五入问题">
-<meta property="og:url" content="http://blog.mathslib.com/2017/11/17/自定义R函数，解决四舍五入问题/index.html">
+<meta property="og:title" content="unbuntu安装odoo">
+<meta property="og:url" content="http://blog.mathslib.com/2017/11/24/odoo安装/index.html">
 <meta property="og:site_name" content="MathsLib">
-<meta property="og:description" content="对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“">
+<meta property="og:description" content="对初学者而言，odoo的安装是横在面前的第一道坎，必须过的。和几年前情况不同，最近几年，odoo在安装方面已经大幅改进，不需要太专业的技能也能完成安装过程。下面大致介绍odoo的安装过程。 系统环境  12uname  -aLinux hadoop 4.10.0-40-generic #44~16.04.1-Ubuntu SMP Thu Nov 9 15:37:44 UTC 2017 x86_64">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.mathslib.com/images/pasted-4.png">
-<meta property="og:image" content="http://blog.mathslib.com/images/pasted-5.png">
-<meta property="og:image" content="http://blog.mathslib.com/images/pasted-6.png">
-<meta property="og:updated_time" content="2017-11-24T11:15:40.080Z">
+<meta property="og:image" content="http://blog.mathslib.com/images/pasted-8.png">
+<meta property="og:updated_time" content="2017-11-25T14:53:56.383Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义R函数，解决四舍五入问题">
-<meta name="twitter:description" content="对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“">
-<meta name="twitter:image" content="http://blog.mathslib.com/images/pasted-4.png">
+<meta name="twitter:title" content="unbuntu安装odoo">
+<meta name="twitter:description" content="对初学者而言，odoo的安装是横在面前的第一道坎，必须过的。和几年前情况不同，最近几年，odoo在安装方面已经大幅改进，不需要太专业的技能也能完成安装过程。下面大致介绍odoo的安装过程。 系统环境  12uname  -aLinux hadoop 4.10.0-40-generic #44~16.04.1-Ubuntu SMP Thu Nov 9 15:37:44 UTC 2017 x86_64">
+<meta name="twitter:image" content="http://blog.mathslib.com/images/pasted-8.png">
 
 
 
@@ -124,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.mathslib.com/2017/11/17/自定义R函数，解决四舍五入问题/"/>
+  <link rel="canonical" href="http://blog.mathslib.com/2017/11/24/odoo安装/"/>
 
 
 
 
 
-  <title>自定义R函数，解决四舍五入问题 | MathsLib</title>
+  <title>unbuntu安装odoo | MathsLib</title>
   
 
 
@@ -312,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.mathslib.com/2017/11/17/自定义R函数，解决四舍五入问题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.mathslib.com/2017/11/24/odoo安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jiajun zheng">
@@ -329,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">自定义R函数，解决四舍五入问题</h1>
+          <h1 class="post-title" itemprop="name headline">unbuntu安装odoo</h1>
         
 
         <div class="post-meta">
@@ -341,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-17T22:54:06+08:00">
-                2017-11-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T20:13:22+08:00">
+                2017-11-24
               </time>
             
 
@@ -351,39 +348,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/统计软件/" itemprop="url" rel="index">
-                    <span itemprop="name">统计软件</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/统计软件/R/" itemprop="url" rel="index">
-                    <span itemprop="name">R</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -412,23 +376,14 @@
       
 
       
-        <p>　　对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“四舍五入”时，怎么处理呢？既然round不能实现“四舍五入”，那就抛开round，自己定义一个“round”方法，这里用myround表示。</p>
-<p>问题举例，考虑下面语句输出结果： </p>
-<p><img src="/images/pasted-4.png" alt="upload successful"><br>　　可以发现，当0.5前面的值为奇数的时候，则向前进入，当前面的值为偶数的时候，则把0.5舍去。跟传统的“四舍五入”存在差异。下面简单介绍自定义函数myround的实现。</p>
-<h2 id="算法1："><a href="#算法1：" class="headerlink" title="算法1："></a>算法1：</h2><p>①获取x的符号，记为vorz</p>
-<p>②计算 $$ z = \left | x \right | * 10 ^{n} + 0.5 $$</p>
-<p>③对z向下截断,并把结果赋值给z</p>
-<p>④计算 $$ z = z  /  (10^{n}) $$</p>
-<p>⑤返回 z * vorz</p>
-<p>对应的R代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">myround = function(x, n)&#123;      </span><br><span class="line">  vorz = sign(x)</span><br><span class="line">  z = abs(x) * 10^n</span><br><span class="line">  z = z + 0.5</span><br><span class="line">  z = trunc(z)</span><br><span class="line">  z = z/10^n</span><br><span class="line">  return(z * vorz)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="算法2"><a href="#算法2" class="headerlink" title="算法2:"></a>算法2:</h2><p>①计算 $$ z = x * 10^{n} + 0.5 $$</p>
-<p>②对z进行向下取整</p>
-<p>③计算 $$ z = z / (10^{n}) $$</p>
-<p>④返回z</p>
-<p>R代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myround = function(x, n)&#123;</span><br><span class="line">    z = x * 10^n</span><br><span class="line">    z = z + 0.5</span><br><span class="line">    z = floor(z)</span><br><span class="line">    z = z/10^n</span><br><span class="line">    return (z)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>再次测试一开始的代码：</p>
-<p><img src="/images/pasted-5.png" alt="upload successful"><br>四舍五入完成。<br>代码改进：考虑到下面的问题，当用myround对4.5四舍五入时，第二个参数忘记写，会出现下面报错，为了避免这种情况发生，给n设置默认值0，即默认情况下是保留整数位。</p>
-<p><img src="/images/pasted-6.png" alt="upload successful"><br>改进后代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">myround = function(x, n=0)&#123;</span><br><span class="line">    vorz = sign(x)</span><br><span class="line">    z = abs(x) * 10^n</span><br><span class="line">    z = z + 0.5</span><br><span class="line">    z = trunc(z)</span><br><span class="line">    z = z/10^n</span><br><span class="line">    return(z * vorz)</span><br><span class="line">&#125;</span><br><span class="line">or</span><br><span class="line">myround = function(x, n=0)&#123;</span><br><span class="line">    z = x * 10^n</span><br><span class="line">    z = z + 0.5</span><br><span class="line">    z = floor(z)</span><br><span class="line">    z = z/10^n</span><br><span class="line">    return (z)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>对初学者而言，odoo的安装是横在面前的第一道坎，必须过的。和几年前情况不同，最近几年，odoo在安装方面已经大幅改进，不需要太专业的技能也能完成安装过程。下面大致介绍odoo的安装过程。</p>
+<h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uname  -a</span><br><span class="line">Linux hadoop 4.10.0-40-generic #44~16.04.1-Ubuntu SMP Thu Nov 9 15:37:44 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure>
+<h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>  1、更新系统（碰到问 Y/n的地方，一律 Y，下同）<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get upgrade</span><br></pre></td></tr></table></figure></p>
+<p>  2、安装数据库<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install postgresql postgresql-contrib</span><br></pre></td></tr></table></figure></p>
+<p>  3、安装odoo<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gdebi</span><br><span class="line">wget http://nightly.odoo.com/10.0/nightly/deb/odoo_10.0.20171123_all.deb</span><br><span class="line">sudo gdebi odoo_10.0.20171123_all.deb</span><br></pre></td></tr></table></figure></p>
+<p>  4、安装 PDF 生成器 wkhtmltopdf<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxrender1 fontconfig xvfb</span><br><span class="line">sudo apt install wkhtmltopdf</span><br></pre></td></tr></table></figure></p>
+<p>  5、检查是否安装成功<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/pasted-8.png" alt="upload successful"></p>
 
       
     </div>
@@ -444,12 +399,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/R基础/" rel="tag"><i class="fa fa-tag"></i> R基础</a>
-          
-        </div>
-      
 
       
       
@@ -459,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/17/linux安装R/" rel="next" title="linux安装R">
-                <i class="fa fa-chevron-left"></i> linux安装R
+              <a href="/2017/11/19/ubuntu添加用户到root组/" rel="next" title="ubuntu添加用户到root组">
+                <i class="fa fa-chevron-left"></i> ubuntu添加用户到root组
               </a>
             
           </div>
@@ -468,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/18/pydev—linux下的python版本管理工具/" rel="prev" title="pyenv—linux下的python版本管理工具">
-                pyenv—linux下的python版本管理工具 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -609,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法1："><span class="nav-number">1.</span> <span class="nav-text">算法1：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法2"><span class="nav-number">2.</span> <span class="nav-text">算法2:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#系统环境"><span class="nav-number">1.</span> <span class="nav-text">系统环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装过程"><span class="nav-number">2.</span> <span class="nav-text">安装过程</span></a></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="R基础," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,22 +79,16 @@
 
 
 
-<meta name="description" content="对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函">
-<meta name="keywords" content="R基础">
-<meta property="og:type" content="article">
-<meta property="og:title" content="自定义R函数，解决四舍五入问题">
-<meta property="og:url" content="http://blog.mathslib.com/2017/11/17/自定义R函数，解决四舍五入问题/index.html">
+<meta name="description" content="不知所措，才是人生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MathsLib">
+<meta property="og:url" content="http://blog.mathslib.com/page/2/index.html">
 <meta property="og:site_name" content="MathsLib">
-<meta property="og:description" content="对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“">
+<meta property="og:description" content="不知所措，才是人生">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog.mathslib.com/images/pasted-4.png">
-<meta property="og:image" content="http://blog.mathslib.com/images/pasted-5.png">
-<meta property="og:image" content="http://blog.mathslib.com/images/pasted-6.png">
-<meta property="og:updated_time" content="2017-11-24T11:15:40.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义R函数，解决四舍五入问题">
-<meta name="twitter:description" content="对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“">
-<meta name="twitter:image" content="http://blog.mathslib.com/images/pasted-4.png">
+<meta name="twitter:title" content="MathsLib">
+<meta name="twitter:description" content="不知所措，才是人生">
 
 
 
@@ -124,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.mathslib.com/2017/11/17/自定义R函数，解决四舍五入问题/"/>
+  <link rel="canonical" href="http://blog.mathslib.com/page/2/"/>
 
 
 
 
 
-  <title>自定义R函数，解决四舍五入问题 | MathsLib</title>
+  <title>MathsLib</title>
   
 
 
@@ -159,7 +153,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
     <a href="https://github.com/1099094077"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
@@ -297,9 +292,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -312,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.mathslib.com/2017/11/17/自定义R函数，解决四舍五入问题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.mathslib.com/2017/11/17/linux安装R/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jiajun zheng">
@@ -329,7 +324,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">自定义R函数，解决四舍五入问题</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/17/linux安装R/" itemprop="url">linux安装R</a></h1>
         
 
         <div class="post-meta">
@@ -341,7 +338,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-17T22:54:06+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-17T20:33:02+08:00">
                 2017-11-17
               </time>
             
@@ -412,24 +409,21 @@
       
 
       
-        <p>　　对于“四舍五入”的概念，相信大家都熟悉，因为小学三四年级就已经接触过了，但对于银行家算法，也许有不少人比较生疏。此前，曾经听说过银行家算法，也知道算法“四舍六入五取偶”的具体实现方法，那就是：（假设对小数部分进行舍入的话），待舍入的部分恰好为0.5000，则需要看前面一位数的奇偶性，奇数则入，偶数则舍。R的round函数使用银行家算法，所以得出的结果跟“四舍五入”的结果会有差异。当业务要用到“四舍五入”时，怎么处理呢？既然round不能实现“四舍五入”，那就抛开round，自己定义一个“round”方法，这里用myround表示。</p>
-<p>问题举例，考虑下面语句输出结果： </p>
-<p><img src="/images/pasted-4.png" alt="upload successful"><br>　　可以发现，当0.5前面的值为奇数的时候，则向前进入，当前面的值为偶数的时候，则把0.5舍去。跟传统的“四舍五入”存在差异。下面简单介绍自定义函数myround的实现。</p>
-<h2 id="算法1："><a href="#算法1：" class="headerlink" title="算法1："></a>算法1：</h2><p>①获取x的符号，记为vorz</p>
-<p>②计算 $$ z = \left | x \right | * 10 ^{n} + 0.5 $$</p>
-<p>③对z向下截断,并把结果赋值给z</p>
-<p>④计算 $$ z = z  /  (10^{n}) $$</p>
-<p>⑤返回 z * vorz</p>
-<p>对应的R代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">myround = function(x, n)&#123;      </span><br><span class="line">  vorz = sign(x)</span><br><span class="line">  z = abs(x) * 10^n</span><br><span class="line">  z = z + 0.5</span><br><span class="line">  z = trunc(z)</span><br><span class="line">  z = z/10^n</span><br><span class="line">  return(z * vorz)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="算法2"><a href="#算法2" class="headerlink" title="算法2:"></a>算法2:</h2><p>①计算 $$ z = x * 10^{n} + 0.5 $$</p>
-<p>②对z进行向下取整</p>
-<p>③计算 $$ z = z / (10^{n}) $$</p>
-<p>④返回z</p>
-<p>R代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myround = function(x, n)&#123;</span><br><span class="line">    z = x * 10^n</span><br><span class="line">    z = z + 0.5</span><br><span class="line">    z = floor(z)</span><br><span class="line">    z = z/10^n</span><br><span class="line">    return (z)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>再次测试一开始的代码：</p>
-<p><img src="/images/pasted-5.png" alt="upload successful"><br>四舍五入完成。<br>代码改进：考虑到下面的问题，当用myround对4.5四舍五入时，第二个参数忘记写，会出现下面报错，为了避免这种情况发生，给n设置默认值0，即默认情况下是保留整数位。</p>
-<p><img src="/images/pasted-6.png" alt="upload successful"><br>改进后代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">myround = function(x, n=0)&#123;</span><br><span class="line">    vorz = sign(x)</span><br><span class="line">    z = abs(x) * 10^n</span><br><span class="line">    z = z + 0.5</span><br><span class="line">    z = trunc(z)</span><br><span class="line">    z = z/10^n</span><br><span class="line">    return(z * vorz)</span><br><span class="line">&#125;</span><br><span class="line">or</span><br><span class="line">myround = function(x, n=0)&#123;</span><br><span class="line">    z = x * 10^n</span><br><span class="line">    z = z + 0.5</span><br><span class="line">    z = floor(z)</span><br><span class="line">    z = z/10^n</span><br><span class="line">    return (z)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        
+          
+          文章介绍ubuntu跟centos两种发型版本安装R语言的方法。
+ubuntu安装R配置R源1sudo nano /etc/apt/sources.list
+在最后添加1deb bin/https://mirrors.tuna.tsinghua.edu.cn/CRAN//ubuntu xenial/
+设置Secure APT1sudo apt-key adv --keyserver keyserv
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/17/linux安装R/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -444,40 +438,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/R基础/" rel="tag"><i class="fa fa-tag"></i> R基础</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/11/17/linux安装R/" rel="next" title="linux安装R">
-                <i class="fa fa-chevron-left"></i> linux安装R
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/18/pydev—linux下的python版本管理工具/" rel="prev" title="pyenv—linux下的python版本管理工具">
-                pyenv—linux下的python版本管理工具 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -487,11 +455,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -499,10 +470,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -523,17 +490,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -599,22 +557,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法1："><span class="nav-number">1.</span> <span class="nav-text">算法1：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法2"><span class="nav-number">2.</span> <span class="nav-text">算法2:</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -756,10 +698,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
-
 
   
 

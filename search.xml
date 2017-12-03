@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[unbuntu安装odoo]]></title>
+    <url>%2F2017%2F11%2F24%2Fodoo%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[对初学者而言，odoo的安装是横在面前的第一道坎，必须过的。和几年前情况不同，最近几年，odoo在安装方面已经大幅改进，不需要太专业的技能也能完成安装过程。下面大致介绍odoo的安装过程。 系统环境 12uname -aLinux hadoop 4.10.0-40-generic #44~16.04.1-Ubuntu SMP Thu Nov 9 15:37:44 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux 安装过程 1、更新系统（碰到问 Y/n的地方，一律 Y，下同） 1sudo apt-get update &amp;&amp; sudo apt-get upgrade 2、安装数据库 1sudo apt-get install postgresql postgresql-contrib 3、安装odoo 123sudo apt install gdebiwget http://nightly.odoo.com/10.0/nightly/deb/odoo_10.0.20171123_all.debsudo gdebi odoo_10.0.20171123_all.deb 4、安装 PDF 生成器 wkhtmltopdf 12sudo apt-get install libxrender1 fontconfig xvfbsudo apt install wkhtmltopdf 5、检查是否安装成功 1netstat -ntlp]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[ubuntu添加用户到root组]]></title>
     <url>%2F2017%2F11%2F19%2Fubuntu%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E5%88%B0root%E7%BB%84%2F</url>
     <content type="text"><![CDATA[以root身份登录，然后输入1usermod -g root username 执行完后username即归属于root组了，可以再输入1id username 查看输出验证一下，如果看到类似下面的输出：1uid=502(username) gid=0(root) 组=0(root) 就表示OK了]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[pyenv进行python版本本地安装]]></title>
